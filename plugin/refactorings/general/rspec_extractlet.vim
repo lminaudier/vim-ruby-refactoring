@@ -10,7 +10,8 @@ function! ExtractIntoRspecLet()
   normal! dd
   exec "?^\\s*\\<\\(describe\\|context\\)\\>"
   normal! $p
-  exec 's/\v([a-z_][a-zA-Z0-9_]*) \= (.+)/let(:\1) { \2 }'
+  exec "normal! ^ilet(:\<esc>Ea)\<esc>lldt=lldwi{ \<esc>A }\<esc>"
   normal V=
 
 endfunction
+
